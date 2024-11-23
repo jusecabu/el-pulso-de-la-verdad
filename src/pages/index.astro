@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NewsApp from "../components/NewsApp";
+---
+
+<Layout title="El Pulso de la Verdad">
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold text-center mb-8">El Pulso de la Verdad</h1>
+    <NewsApp client:load />
+  </main>
+</Layout>
+
+<style is:global>
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background: #f6f6f6;
+    color: #333;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+</style>
